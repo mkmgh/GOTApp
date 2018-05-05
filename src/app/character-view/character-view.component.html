@@ -1,0 +1,89 @@
+<div class="container" style="text-align:center">
+    <div class="row" style="text-align:center"  *ngIf="currentCharacter.length>0">
+      <div class="col-md-12" style="font-size:26px">Details of Characters</div>
+      <br><br>
+    </div>
+ <!--      
+        <div class="panel panel-default">
+        <div class="panel-heading">Name: {{currentCharacter.name|uppercase}}</div>
+              <div class="panel-body">
+                culture : {{currentCharacter.culture}}<br><hr><br>
+                gender :{{currentCharacter.gender}}<br><hr><br>
+                Aiases : {{currentCharacter.aliases}}<br><hr><br>
+
+                Related Book : 
+                <br><br>
+            
+                <div class="row" style="text-align:center">
+                 <div class="col-md-1"  *ngFor="let book of currentCharacter.books;"  style="margin-bottom: 10px; margin-left:10px; margin-right:2px;">
+                  <button routerLink="/books/{{book.split('/').pop()}}" type="button" class="btn btn-primary"> Book ID : {{book.split('/').pop()}}</button>
+                 </div>
+                </div><br><hr><br>
+  
+
+              </div>
+                    <br>
+                    <div class="row" style="text-align:center">
+                        <div class="col-md-12">
+                          <a class="btn btn-primary" (click)="goBackToPreviousPage()">Go Back</a>
+                        </div>
+                        <br><br>    
+                    </div>
+                    <br>
+        </div>
+      -->      
+
+      <div class="card text-center" style="border:rgb(49, 49, 175) 2px solid"><br>
+          <div class="card-header">
+              Character Name: <h3>{{currentCharacter.name||defaultValue}}</h3>
+          </div>
+          <div class="card-body" style="padding:50px">
+            <h5 class="card-title"></h5>
+    
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> culture : {{currentCharacter.culture||defaultValue}}</li>
+                <li class="list-group-item">gender : {{currentCharacter.gender||defaultValue}}</li>
+                <li class="list-group-item">Aiases : {{currentCharacter.aliases }}</li>
+            </ul>
+               
+            <div class="row text-center" style="border:black 2px solid">
+                Realated Books :<br><br> 
+                <div class="col-md-1"  *ngFor="let book of currentCharacter.books;"  style="margin-bottom: 10px; margin-left:10px; margin-right:2px;">
+                 <button routerLink="/books/{{book.split('/').pop()}}" type="button" class="btn btn-primary"> Book ID : {{book.split('/').pop()}}</button>
+                </div>
+            </div><hr>
+    
+          </div>
+          <div class="card-footer">
+              <br>
+              <div class="row" style="text-align:center">
+                  <div class="col-md-12">
+                    <a class="btn btn-primary" (click)="goBackToPreviousPage()">Go Back</a>
+                  </div>
+                  <br><br>    
+              </div>
+              <br>
+          </div>
+    
+        </div>
+        <br><br>
+
+        <go-top-button   [animate]="true"
+        [speed]="50"
+        [acceleration]="2"
+        [scrollDistance]="300"
+        [styles]="{
+           'border-radius': '20px 20px 20px 20px',
+           'right': '5px',
+           'color': 'black',
+           'border': '5px solid',
+           'line-height': '20px'
+        }">
+        <i class="fa fa-arrow-up"></i>
+
+        </go-top-button>
+
+  </div>
+
+
+
