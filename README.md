@@ -5,7 +5,7 @@
 
 		# Main Page (Home Page of Application)
 
-	    -- Here you will see 4 options to choose from which are -
+	      -- Here you will see 4 options to choose from which are -
 		    -- All  : This option show all the Houses, Characters, Books present in Game of Thrones.
 
 		    -- Books: This option will present you all the books in the game of thrones. On clicking any one of the books it will show you all the details about that book. 
